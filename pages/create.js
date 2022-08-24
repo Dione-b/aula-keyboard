@@ -15,7 +15,7 @@ export default function Create() {
   const [filter, setFilter] = useState('')
   const [mining, setMining] = useState(false)
 
-  const contractAddress = '0x5B5a29ED178D8c6A4DC24Ac25037A76C7478f6BF';
+  const contractAddress = '0xBB3cD5f4E342c904d3B8Ec5b43FEe69A9E9103A0';
   const contractABI = abi.abi;
 
   const handleAccounts = (accounts) => {
@@ -86,7 +86,7 @@ export default function Create() {
 
   return (
     <div className="flex flex-col gap-y-8">
-      <form className="mt-8 flex flex-col gap-y-6">
+      <form className="flex flex-col mt-8 gap-y-6">
         <div>
           <label htmlFor="keyboard-type" className="block text-sm font-medium text-gray-700">
             Keyboard Type
@@ -94,7 +94,7 @@ export default function Create() {
           <select
             id="keyboard-type"
             name="keyboard-type"
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+            className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             value={keyboardKind}
             onChange={(e) => { setKeyboardKind(e.target.value) }}
           >
@@ -112,7 +112,7 @@ export default function Create() {
           <select
             id="keycap-type"
             name="keycap-type"
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+            className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             value={isPBT ? "pbt" : "abs"}
             onChange={(e) => { setIsPBT(e.target.value === "pbt") }}
           >
@@ -128,7 +128,7 @@ export default function Create() {
           <select
             id="filter"
             name="filter"
-            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+            className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             onChange={(e) => { setFilter(e.target.value) }}
             value={filter}
           >
